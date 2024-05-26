@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    width: 100vh;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+}
+
+button {
+    border-radius: 0;
+    background-color: white;
+}

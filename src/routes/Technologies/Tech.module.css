@@ -1,0 +1,6 @@
+.techDisplay {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 15% 85%;
+}

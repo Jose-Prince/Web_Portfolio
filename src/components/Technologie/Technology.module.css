@@ -6,3 +6,36 @@
     height: 100%;
     font-size: 35px;
 }
+
+.techGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    overflow-y: auto;
+    grid-auto-rows: 25%;
+}
+
+.techItem {
+    position: relative;
+    overflow: hidden;
+}
+
+.techName {
+    color: transparent;
+    position: absolute;
+    z-index: 2;
+    cursor: default;
+    transform: translateX(0) translateY(0);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.techItem:hover .techName {
+    color: white;
+    transform: translateX(25px) translateY(0px); /* Ajusta el valor para mover hacia abajo */
+}
+
+.techItem img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+

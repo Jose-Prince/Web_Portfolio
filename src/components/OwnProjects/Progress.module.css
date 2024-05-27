@@ -1,0 +1,39 @@
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.cardImage {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+}
+
+.cardContent {
+  padding: 16px;
+}
+
+.cardTitle {
+  font-size: 1.25em;
+  margin: 0 0 8px 0;
+}
+
+.cardText {
+  color: #555;
+}

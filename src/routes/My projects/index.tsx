@@ -9,7 +9,9 @@ export default component$(() => {
     <>
       <ButtonsDisplay />
       <div class={styles.projectDisplay}>
+        <h1>Projects finished:</h1>
         <OwnProjects />
+        <h1>In production:</h1>
       </div>
     </>
   );

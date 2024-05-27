@@ -16,7 +16,7 @@ export const OwnProjects = component$(()=>{
     
       const getStyles = (index: number) => {
         const stt = Math.abs(index - state.active);
-        const translateX = 120 * stt * (index > state.active ? 1 : -1);
+        const translateX = 200 * stt * (index > state.active ? 1 : -1);
         const scale = 1 - 0.2 * stt;
         const opacity = stt > 2 ? 0 : 0.6;
         const zIndex = index === state.active ? 1 : -stt;

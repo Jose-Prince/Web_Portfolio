@@ -27,7 +27,11 @@ body {
 
 button {
     border-radius: 0;
-    background-color: #711c91;
+    background-color: #091833;
+}
+
+button:hover {
+    background-color: #133e7e;
 }
 
 h1 {

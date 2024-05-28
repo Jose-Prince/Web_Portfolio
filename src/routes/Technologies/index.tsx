@@ -31,6 +31,10 @@ export default component$(() => {
             {
                 link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png',
                 name: 'JavaScript'
+            },
+            {
+                link: 'https://vitejs.dev/logo-with-shadow.png',
+                name: 'Vite'
             }
         ],
         back :[
@@ -47,8 +51,12 @@ export default component$(() => {
                 name: 'Docker'
             },
             {
-                link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png',
-                name: 'JavaScript'
+                link: 'https://miro.medium.com/v2/resize:fit:800/1*v2vdfKqD4MtmTSgNP0o5cg.png',
+                name: 'Node.js'
+            },
+            {
+                link: 'https://vitest.dev/logo-shadow.svg',
+                name: 'Vitest'
             }
         ],
         data : [

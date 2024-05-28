@@ -12,24 +12,30 @@ export const OwnProjects = component$(()=>{
         items: [
           { id: 1, 
             title: "Movies' Blog", 
-            content: 'adskjakjlsdlk',
+            content: 'Web blog that shows the best movies in my opinion. It has two screens: Home and Admin. In the Home screen you can visualize the content of each movie; Admin has the same functions of Home but it adds the possibility to create, modify and delete movies. ',
             picture: blog,
             technologies: [
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png'
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png',
+              'https://miro.medium.com/v2/resize:fit:800/1*v2vdfKqD4MtmTSgNP0o5cg.png',
+              'https://vitejs.dev/logo-with-shadow.png',
+              'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg'
             ] },
           { id: 2, 
             title: 'Sonic CSS', 
-            content: 'adskjakjlsdlk' ,
+            content: 'Recreation of Sonic running in "Green Hills Zone 1", using only CSS and HTML.' ,
             picture: sonic,
             technologies: [
-              ''
+              'https://cdn-icons-png.flaticon.com/256/174/174854.png',
+              'https://img-resize-cdn.joshmartin.ch/768x0%2Cc3537b9f46b5f6055fbc8b4cd03b6b2cc63fc2eefd3d8cd9f0c9f99a5933e496/https://joshmartin.ch/app/uploads/2017/10/css3.svg'
             ] },
           { id: 3, 
             title: 'Calculator', 
-            content: 'adskjakjlsdlk' ,
+            content: 'Calculator that uses addition, subtraction, multiplication and division functions. The purpose of making it was to learn how to do testing with Vitest. The calculator is simple and allows only one operation at a time.' ,
             picture: calc,
             technologies: [
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png'
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png',
+              'https://vitejs.dev/logo-with-shadow.png',
+              'https://vitest.dev/logo-shadow.svg'
             ] },
         ]
       });
@@ -80,11 +86,14 @@ export const OwnProjects = component$(()=>{
                       </div>
                     </div>
                     <h4 style={{margin: '0', width: '100%', paddingLeft: '20px', paddingTop: '10px'}}>Technologies:</h4>
-                    {
-                      item.technologies.map((tech)=>(
-                        <Imagen ref={tech} type={false} ancho="3"/>
-                      ))
-                    }
+                    <div style={{display: 'flex', gap: '10px'}}>
+                      {
+                        item.technologies.map((tech)=>(
+                          
+                          <Imagen ref={tech} type={false} ancho="3"/>
+                        ))
+                      }
+                    </div>
                   </div>
             );
         })}

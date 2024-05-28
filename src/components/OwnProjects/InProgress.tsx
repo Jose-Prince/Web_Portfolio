@@ -7,10 +7,10 @@ export const InProgress = component$(() => {
     items: [
       { id: 1, 
         title: 'SABTE', 
-        description: 'Proyecto desarrollado para crear una plataforma por la cual se pueda facilitar la contratación de empleados que tengan trabajos informales. Diseñada para Guatemala, actualmente desarrollada por un equipo de 5 personas.', 
+        description: 'Project developed to create a platform to facilitate the hiring of employees who have informal jobs. Designed for Guatemala, currently developed by a team of 5 people.', 
         objectives: [
-          'Facilitar la contratación de trabajos informales',
-          'Plataforma disponible como página web y aplicación móvil'
+          'Facilitating the hiring of informal jobs',
+          'Platform available as website and mobile application'
         ],
         technologies: [
           'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png',

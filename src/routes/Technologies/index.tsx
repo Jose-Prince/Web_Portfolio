@@ -23,6 +23,14 @@ export default component$(() => {
             {
                 link: 'https://www.wonderpush.com/wp-content/uploads/2019/09/ionic.png',
                 name: 'Ionic'
+            },
+            {
+                link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png',
+                name: 'TypeScript'
+            },
+            {
+                link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png',
+                name: 'JavaScript'
             }
         ],
         back :[
@@ -37,6 +45,10 @@ export default component$(() => {
             {
                 link: 'https://www.docker.com/wp-content/uploads/2023/05/symbol_blue-docker-logo.png',
                 name: 'Docker'
+            },
+            {
+                link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png',
+                name: 'JavaScript'
             }
         ],
         data : [

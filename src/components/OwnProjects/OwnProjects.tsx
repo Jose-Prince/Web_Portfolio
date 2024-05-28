@@ -1,16 +1,36 @@
 import { $, component$, useStore } from "@builder.io/qwik";
 import styles from '../../routes/My projects/Projects.module.css';
-
+import calc from '../../../public/clac.png'
+import blog from '../../../public/blog.png'
+import sonic from '../../../public/sonic.png'
+import { Imagen } from "../About/Imagen";
 
 export const OwnProjects = component$(()=>{
 
     const state = useStore({
-        active: 3,
+        active: 0,
         items: [
-          { id: 1, title: 'Slide 1', content: 'adskjakjlsdlk' },
-          { id: 2, title: 'Slide 2', content: 'adskjakjlsdlk' },
-          { id: 3, title: 'Slide 3', content: 'adskjakjlsdlk' },
-          { id: 4, title: 'Slide 4', content: 'adskjakjlsdlk' }
+          { id: 1, 
+            title: "Movies' Blog", 
+            content: 'adskjakjlsdlk',
+            picture: blog,
+            technologies: [
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png'
+            ] },
+          { id: 2, 
+            title: 'Sonic CSS', 
+            content: 'adskjakjlsdlk' ,
+            picture: sonic,
+            technologies: [
+              ''
+            ] },
+          { id: 3, 
+            title: 'Calculator', 
+            content: 'adskjakjlsdlk' ,
+            picture: calc,
+            technologies: [
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png'
+            ] },
         ]
       });
     
@@ -50,9 +70,22 @@ export const OwnProjects = component$(()=>{
               const style = getStyles(index);
               return (
                   <div key={item.id} class={styles.item} style={style}>
-                <h1>{item.title}</h1>
-                <p>{item.content}</p>
-              </div>
+                    <h2>{item.title}</h2>
+                    <div style={{display:'flex', height: '50%', width: '100%'}}>
+                      <div class={styles.picDisplay}>
+                        <img src={item.picture} alt='Imagen' style={{width: '100%', height: '100%'}}/>
+                      </div>
+                      <div class={styles.descDisplay}>
+                          {item.content}
+                      </div>
+                    </div>
+                    <h4 style={{margin: '0', width: '100%', paddingLeft: '20px', paddingTop: '10px'}}>Technologies:</h4>
+                    {
+                      item.technologies.map((tech)=>(
+                        <Imagen ref={tech} type={false} ancho="3"/>
+                      ))
+                    }
+                  </div>
             );
         })}
         <button id={styles.next} onClick$={handleNext}>{'>'}</button>

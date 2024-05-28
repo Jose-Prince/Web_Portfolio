@@ -16,9 +16,6 @@ export const InProgress = component$(() => {
           'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png',
         ] 
       },
-      { id: 2, title: 'Card 2', content: 'Content for card 2', imgSrc: 'https://via.placeholder.com/150' },
-      { id: 3, title: 'Card 3', content: 'Content for card 3', imgSrc: 'https://via.placeholder.com/150' },
-      { id: 4, title: 'Card 4', content: 'Content for card 4', imgSrc: 'https://via.placeholder.com/150' }
     ]
   });
 

@@ -13,12 +13,15 @@ export default component$(() => {
             <div class={styles.aboutDisplay}>
                 <Circle />
                 <h1>José Alejandro Prince Martinez</h1>
-                <Contact info="joseprince148@gmail.com" ref="https://cdn.icon-icons.com/icons2/730/PNG/512/gmail_icon-icons.com_62758.png"/>
-                <Contact info="+502 5975-9958" ref="https://cdn-icons-png.freepik.com/256/3870/3870798.png?semt=ais_hybrid"/>
-                <div class={styles.description}>Programador desde hace 2 años. Actualmente estudiante en la Universidad del Valle de Guatemala en la carrera de Licenciatura en Ingenieria en Ciencias de de la computación y Tecnologías de la Información. Sin experencia laboral como programador junior. Conocimiento variado en diferentes lenguajes tanto de Back-end y Front-end. Se tiene un gusto principalmente en el desarrollo de Front-end tanto para aplicaciones móviles como para páginas web, dominando principalmente las tecnologías web. Se tiene un gusto por el aprendizaje, lo que hace que pruebe diferentes tecnologías para tener una mejor noción sobre el uso de las diferentes tecnologías que existen y cuando es mejor aplicar cada una de ellas. </div>
+                <div class={styles.description}>I have been working as a programmer for two years and I am currently a student at the Universidad del Valle de Guatemala, pursuing a degree in Computer Science and Information Technology Engineering. Although I do not have formal work experience as a junior programmer, I have extensive knowledge in various programming languages both in the field of Front-end and Back-end development. My main interest lies in Front-end development for mobile applications and websites, and I have an outstanding proficiency in the associated web technologies. I am avid for knowledge and am constantly exploring new technologies to improve my skills and better understand their application in different contexts.
+                </div>
                 <div style={{display: 'flex'}}>
-                    <Reference link="https://www.linkedin.com/in/jos%C3%A9-alejandro-prince-martinez-179ba622a/" ref='https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png' ancho="15vw"/>
-                    <Reference link="https://github.com/Jose-Prince" ref='https://www.svgrepo.com/show/217753/github.svg' ancho="15vw"/>
+                    <Reference link="https://www.linkedin.com/in/jos%C3%A9-alejandro-prince-martinez-179ba622a/" ref='https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png' ancho="10vw"/>
+                    <Reference link="https://github.com/Jose-Prince" ref='https://www.svgrepo.com/show/217753/github.svg' ancho="10vw"/>
+                </div>
+                <div style={{display:'flex', justifyContent: "space-evenly", width: '100%'}}>
+                    <Contact info="joseprince148@gmail.com" ref="https://cdn.icon-icons.com/icons2/730/PNG/512/gmail_icon-icons.com_62758.png"/>
+                    <Contact info="+502 5975-9958" ref="https://cdn-icons-png.freepik.com/256/3870/3870798.png?semt=ais_hybrid"/>
                 </div>
             </div>
         </>

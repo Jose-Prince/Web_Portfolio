@@ -40,12 +40,17 @@
 
 .imgProfile {
     border-radius: 50%;
-    min-width: 150px;
-    min-height: 150px;
+    min-width: 20px;
+    min-height: 20px;
 }
 
 .description {
     width: 80%;
     text-align: justify;
-    margin-bottom: 50px;
+}
+
+.horizontalDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

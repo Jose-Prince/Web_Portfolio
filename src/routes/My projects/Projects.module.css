@@ -36,3 +36,10 @@
     padding: 15px;
     cursor: pointer;
 }
+
+.indicator {
+    width: 100%;
+    height: auto;
+    background-color: #091833;
+    opacity: 0.8;
+}

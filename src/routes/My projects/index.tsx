@@ -10,9 +10,13 @@ export default component$(() => {
     <>
       <ButtonsDisplay />
       <div class={styles.projectDisplay}>
-        <h1>Projects finished:</h1>
+        <div class={styles.indicator}>
+          <h1 style={{margin:'0', opacity: 'none'}}>Projects finished:</h1>
+        </div>
         <OwnProjects />
-        <h1>In production:</h1>
+        <div class={styles.indicator}>
+          <h1 style={{margin:'0', opacity: 'none'}}>In production:</h1>
+        </div>
         <InProgress />
       </div>
     </>

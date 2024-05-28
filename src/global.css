@@ -6,6 +6,25 @@ body {
     display: flex;
 }
 
+body {
+    background: linear-gradient(-45deg, #711c91, #ea00d9, #0abdcb , #133e7e, #091833);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
 button {
     border-radius: 0;
     background-color: #711c91;

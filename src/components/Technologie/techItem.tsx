@@ -18,7 +18,7 @@ export const TechItem = component$<ItemsProps>(({ link, name, width, aspectRatio
                 src={link}
                 alt={name}
                 class={styles.techImage}
-                style={{ width: `${widthNum}vw`, height: `${heightNum}vw` }}
+                style={{ width: `${widthNum}px`, height: `${heightNum}px` }}
                 width={widthNum}
                 height={heightNum}
             />

@@ -4,6 +4,7 @@ import calc from '../../../public/clac.png'
 import blog from '../../../public/blog.png'
 import sonic from '../../../public/sonic.png'
 import { Imagen } from "../About/Imagen";
+import { useNavigate } from "@builder.io/qwik-city";
 
 export const OwnProjects = component$(()=>{
 
@@ -19,7 +20,8 @@ export const OwnProjects = component$(()=>{
               'https://miro.medium.com/v2/resize:fit:800/1*v2vdfKqD4MtmTSgNP0o5cg.png',
               'https://vitejs.dev/logo-with-shadow.png',
               'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg'
-            ] },
+            ],
+            page: 'http://172.233.155.162:8090/Home' },
           { id: 2, 
             title: 'Sonic CSS', 
             content: 'Recreation of Sonic running in "Green Hills Zone 1", using only CSS and HTML.' ,
@@ -27,7 +29,8 @@ export const OwnProjects = component$(()=>{
             technologies: [
               'https://cdn-icons-png.flaticon.com/256/174/174854.png',
               'https://img-resize-cdn.joshmartin.ch/768x0%2Cc3537b9f46b5f6055fbc8b4cd03b6b2cc63fc2eefd3d8cd9f0c9f99a5933e496/https://joshmartin.ch/app/uploads/2017/10/css3.svg'
-            ] },
+            ],
+            page: '' },
           { id: 3, 
             title: 'Calculator', 
             content: 'Calculator that uses addition, subtraction, multiplication and division functions. The purpose of making it was to learn how to do testing with Vitest. The calculator is simple and allows only one operation at a time.' ,
@@ -36,7 +39,8 @@ export const OwnProjects = component$(()=>{
               'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png',
               'https://vitejs.dev/logo-with-shadow.png',
               'https://vitest.dev/logo-shadow.svg'
-            ] },
+            ],
+            page: '' },
         ]
       });
     
@@ -67,6 +71,10 @@ export const OwnProjects = component$(()=>{
         state.active = state.active - 1 >= 0 ? state.active - 1 : state.active;
       });
     
+      const handleClick = $(() => {
+        const navigate = useNavigate()
+        navigate('http://172.233.155.162:8090/Home')
+      })
 
     return (
         <>
@@ -75,7 +83,7 @@ export const OwnProjects = component$(()=>{
           {state.items.map((item, index) => {
               const style = getStyles(index);
               return (
-                  <div key={item.id} class={styles.item} style={style}>
+                  <a href="http://172.233.155.162:8090/Home" key={item.id} class={styles.item} style={style}>
                     <h2>{item.title}</h2>
                     <div style={{display:'flex', height: '50%', width: '100%'}}>
                       <div class={styles.picDisplay}>
@@ -94,7 +102,7 @@ export const OwnProjects = component$(()=>{
                         ))
                       }
                     </div>
-                  </div>
+                  </a>
             );
         })}
         <button id={styles.next} onClick$={handleNext}>{'>'}</button>

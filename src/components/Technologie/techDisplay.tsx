@@ -19,7 +19,7 @@ export const TechDisplay = component$<ItemsProps>((props)=>{
         <div class={styles.techGrid}>
             {
                 props.listTech.map((tech) => (
-                    <TechItem link={tech.link} name={tech.name} width="180" aspectRatio={1}/>
+                    <TechItem link={tech.link} name={tech.name} width="100" aspectRatio={1}/>
                 ))
             }
         </div>

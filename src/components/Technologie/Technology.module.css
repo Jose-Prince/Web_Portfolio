@@ -19,13 +19,6 @@
     transition: transform 0.3s ease;
 }
 
-@media (max-width: 571px){
-    .techImage {
-        max-width: 140px;
-        max-height: 140px
-    }
-}
-
 .techItem:hover .techImage {
     transform: scale(1.05); /* Zoom effect on hover */
 }
@@ -55,10 +48,25 @@
     border: 1px solid white;
 }
 
+
+
 .techGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(183px, 1fr));
     overflow-y: auto;
     grid-auto-rows: 25%;
     border: 1px solid white;
+    overflow-x: hidden;
+}
+
+@media (max-width: 460px) {
+    .techItem {
+        justify-content: flex-start;
+        margin: 0px;
+        margin-left: 10px;
+    }
+
+    .titleDisplay {
+        font-size: 20px;
+    }
 }

@@ -6,6 +6,6 @@ import { Imagen } from "./Imagen";
 
 export const Circle = component$(()=>{
     return <div class={styles.circle}>
-        <Imagen ref={Prince} ancho="300px"/>
+        <Imagen ref={Prince} ancho="20vw" type={true}/>
     </div>
 })

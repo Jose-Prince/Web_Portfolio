@@ -13,20 +13,12 @@ export default component$(() => {
                 name: 'React'
             },
             {
-                link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png',
-                name: 'React'
+                link: 'https://avatars.githubusercontent.com/u/138123704?v=4',
+                name: 'Qwik'
             },
             {
-                link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png',
-                name: 'React'
-            },
-            {
-                link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png',
-                name: 'React'
-            },
-            {
-                link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png',
-                name: 'React'
+                link: 'https://itproger.com/img/tests/1567591805.svg',
+                name: 'Kotlin'
             }
         ]
     })

@@ -7,5 +7,5 @@ interface ItemsProps {
 }
 
 export const Imagen = component$<ItemsProps>((props)=>{
-    return <img src={props.ref} class={styles.imgPosition} style={{width: props.ancho}}/>
+    return <img src={props.ref} class={styles.imgPosition} style={{width: props.ancho}} width={props.ancho} height={props.ancho}/>
 })

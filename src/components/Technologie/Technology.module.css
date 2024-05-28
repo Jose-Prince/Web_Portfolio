@@ -9,7 +9,7 @@
 
 .techGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     overflow-y: auto;
     grid-auto-rows: 25%;
 }
@@ -17,25 +17,34 @@
 .techItem {
     position: relative;
     overflow: hidden;
+    width: 60%;
+    min-width: 70%;
+    padding: 20px;
+    padding-bottom: 0px;
 }
 
 .techName {
     color: transparent;
     position: absolute;
-    z-index: 2;
-    cursor: default;
-    transform: translateX(0) translateY(0);
+    bottom: 10px; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
     transition: transform 0.3s ease, color 0.3s ease;
+    cursor: default;
 }
 
 .techItem:hover .techName {
     color: white;
-    transform: translateX(25px) translateY(0px); /* Ajusta el valor para mover hacia abajo */
+    transform: translateX(-50%) translateY(35px); /* Move down */
 }
 
 .techItem img {
     width: 100%;
+    height: auto;
     display: block;
     transition: transform 0.3s ease;
 }
 
+.techItem:hover img {
+    transform: scale(1.05); /* Zoom effect on hover */
+}

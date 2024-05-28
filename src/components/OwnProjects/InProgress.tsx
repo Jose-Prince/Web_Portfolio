@@ -14,12 +14,8 @@ export const InProgress = component$(() => {
   return (
     <div class={styles.cardContainer}>
       {state.items.map((item) => (
-        <div key={item.id} class={styles.card}>
-          <img src={item.imgSrc} alt={item.title} class={styles.cardImage} />
-          <div class={styles.cardContent}>
-            <h2 class={styles.cardTitle}>{item.title}</h2>
-            <p class={styles.cardText}>{item.content}</p>
-          </div>
+        <div class={styles.project}>
+
         </div>
       ))}
     </div>

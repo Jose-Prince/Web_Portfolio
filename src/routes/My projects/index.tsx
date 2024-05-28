@@ -11,7 +11,7 @@ export default component$(() => {
       <ButtonsDisplay />
       <div class={styles.projectDisplay}>
         <div class={styles.indicator}>
-          <h1 style={{margin:'0', opacity: 'none'}}>Projects finished:</h1>
+          <h1 style={{margin:'0', opacity: 'none'}}>Completed projects::</h1>
         </div>
         <OwnProjects />
         <div class={styles.indicator}>

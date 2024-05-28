@@ -71,3 +71,10 @@
     padding: 20px;
     height: 73.5%;
   }
+
+@media (max-width: 400px){
+    .item {
+        left: calc(50% - 50px);
+        width: 500px;
+    }
+}

@@ -11,7 +11,7 @@
 .project {
   color: black;
   border: 3px solid #666;
-  width: 700px;
+  width: 35vw;
   min-width: 500px;
   height: 100%;
   background-color: white;
@@ -44,21 +44,6 @@
   transform: scale(1.05);
 }
 
-.cardImage {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  width: 100%;
-}
+@media (max-width: 400px){
 
-.cardContent {
-  padding: 16px;
-}
-
-.cardTitle {
-  font-size: 1.25em;
-  margin: 0 0 8px 0;
-}
-
-.cardText {
-  color: #555;
 }

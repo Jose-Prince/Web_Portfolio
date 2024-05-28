@@ -19,7 +19,8 @@ export const InProgress = component$(() => {
           'https://miro.medium.com/v2/resize:fit:800/1*v2vdfKqD4MtmTSgNP0o5cg.png',
           'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg',
           'https://static-00.iconduck.com/assets.00/neo4j-icon-452x512-b63ajo4a.png'
-        ] 
+        ],
+        repo: 'https://github.com/cmd-AJ/Ing-Software.git' 
       },
     ]
   });
@@ -27,7 +28,7 @@ export const InProgress = component$(() => {
   return (
     <div class={styles.cardContainer}>
       {state.items.map((item) => (
-        <div class={styles.project}>
+        <a href={item.repo} class={styles.project} target="_blank">
             <h2>{item.title}</h2>
             <div style={{display:'flex', height: '60%', width: '100%'}}>
               <div class={styles.objDisplay}>
@@ -51,7 +52,7 @@ export const InProgress = component$(() => {
                 ))
               }
             </div>
-        </div>
+        </a>
       ))}
     </div>
   );

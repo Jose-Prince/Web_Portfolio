@@ -37,5 +37,11 @@ button:hover {
 h1 {
     padding: 15px;
     margin-top: 0px;
-    font-size: 3vw;
+    font-size: 2vw;
+}
+
+@media (max-width: 880px) {
+  h1 {
+    font-size: 18px;
+  }
 }

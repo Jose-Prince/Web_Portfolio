@@ -16,6 +16,6 @@ The Portfolio present the following vies:
 
 The protfolio was created using the Framework Qwik with TyoeScript. 
 
-![Alt text](relative%20path/to/img.jpg?raw=true "Title")
+![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")
 
 

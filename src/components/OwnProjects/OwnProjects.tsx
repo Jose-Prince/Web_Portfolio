@@ -30,8 +30,8 @@ export const OwnProjects = component$(() => {
           'https://cdn-icons-png.flaticon.com/256/174/174854.png',
           'https://img-resize-cdn.joshmartin.ch/768x0%2Cc3537b9f46b5f6055fbc8b4cd03b6b2cc63fc2eefd3d8cd9f0c9f99a5933e496/https://joshmartin.ch/app/uploads/2017/10/css3.svg'
         ],
-        page: '',
-        repo: ''
+        page: 'http://172.235.51.73:8090/',
+        repo: 'https://github.com/Jose-Prince/Lab_CSS.git'
       },
       { id: 3, 
         title: 'Calculator', 
@@ -42,8 +42,8 @@ export const OwnProjects = component$(() => {
           'https://vitejs.dev/logo-with-shadow.png',
           'https://vitest.dev/logo-shadow.svg'
         ],
-        page: '',
-        repo: ''
+        page: 'http://172.235.51.73:8100/',
+        repo: 'https://github.com/Jose-Prince/Lab_test.git'
       },
     ]
   });

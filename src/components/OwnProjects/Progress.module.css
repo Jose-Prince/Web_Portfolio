@@ -14,7 +14,7 @@
     width: 35vw;
     min-width: 250px;
     height: 100%;
-    background-color: #133e7e;
+    background-color: transparent;
     transition: transform 0.2s;
     display: flex;
     align-items: center;

@@ -53,7 +53,7 @@ export const InProgress: React.FC = () => {
                 {item.description}
               </div>
             </div>
-            <h4 style={{margin: '0', width: '100%', paddingLeft: '20px', paddingTop: '10px', color: '#fff'}}>Technologies:</h4>
+            <h4 style={{margin: '0', width: '100%', paddingLeft: '20px', paddingTop: '5px', color: '#fff', fontSize: '13px'}}>Technologies:</h4>
             <div style={{display: 'flex', gap: '10px'}}>
               {
                 item.technologies?.map((tech: string)=>(

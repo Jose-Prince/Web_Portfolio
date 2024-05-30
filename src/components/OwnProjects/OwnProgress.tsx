@@ -122,7 +122,7 @@ export const OwnProjects: React.FC = () => {
                 onClick={(event) => handleClick(item.page, item.repo, event)}
                 target="_blank"  // Open the project page in a new tab
               >
-                <h2 style={{ cursor: 'pointer', margin: '5px' }}>
+                <h2 style={{ cursor: 'pointer', margin: '5px', color: 'white' }}>
                   {item.title}
                 </h2>
                 <div className={styles.bodyDisplay}>
@@ -133,10 +133,10 @@ export const OwnProjects: React.FC = () => {
                     {item.content}
                   </div>
                 </div>
-                <h4 style={{ margin: '0', width: '100%', paddingLeft: '20px', paddingTop: '10px' }}>Technologies:</h4>
+                <h4 style={{ margin: '0', width: '100%', paddingLeft: '20px', paddingTop: '5px', fontSize: '13px', color: 'white' }}>Technologies:</h4>
                 <div style={{ display: 'flex', gap: '10px' }}>
                   {item.technologies.map((tech: string) => (
-                    <Imagen key={tech} src={tech} type={false} ancho="3vw" variant={'contact'} />
+                    <Imagen key={tech} src={tech} type={false} ancho="2vw" variant={'contact'} />
                   ))}
                 </div>
               </a>

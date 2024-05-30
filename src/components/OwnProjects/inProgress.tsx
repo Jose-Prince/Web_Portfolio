@@ -38,7 +38,7 @@ export const InProgress: React.FC = () => {
     <div className={styles.cardContainer}>
       {state.items.map((item : Item) => (
         <a href={item.repo} className={styles.project} target="_blank">
-            <h2>{item.title}</h2>
+            <h2 style={{color: '#fff'}}>{item.title}</h2>
             <div style={{display:'flex', height: '60%', width: '100%'}}>
               <div className={styles.objDisplay}>
                 <ul>
@@ -53,11 +53,11 @@ export const InProgress: React.FC = () => {
                 {item.description}
               </div>
             </div>
-            <h4 style={{margin: '0', width: '100%', paddingLeft: '20px', paddingTop: '10px'}}>Technologies:</h4>
+            <h4 style={{margin: '0', width: '100%', paddingLeft: '20px', paddingTop: '10px', color: '#fff'}}>Technologies:</h4>
             <div style={{display: 'flex', gap: '10px'}}>
               {
                 item.technologies?.map((tech: string)=>(
-                  <Imagen src={tech} type={false} ancho="3vw" variant={'contact'}/>
+                  <Imagen src={tech} type={false} ancho="2vw" variant={'contact'}/>
                 ))
               }
             </div>

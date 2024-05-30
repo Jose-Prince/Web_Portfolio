@@ -10,11 +10,11 @@
   
   .project {
     color: black;
-    border: 3px solid #666;
+    border: 3px solid #ddd;
     width: 35vw;
     min-width: 250px;
     height: 100%;
-    background-color: white;
+    background-color: #133e7e;
     transition: transform 0.2s;
     display: flex;
     align-items: center;
@@ -23,23 +23,25 @@
   }
   
   .objDisplay {
-    border: 1px solid #666;
+    border: 1px solid #ddd;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 50%;
     padding-right: 10px;
     font-size: 0.9vw;
+    color: #fff;
   }
   
   .descDisplay {
-    border: 1px solid #666;
+    border: 1px solid #ddd;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 50%;
     text-align: justify;
     padding: 20px;
+    color: #fff;
   }
   
   .project:hover {

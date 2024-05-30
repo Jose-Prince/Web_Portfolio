@@ -16,9 +16,9 @@
     color: black;
     position: absolute;
     width: 700px;
-    height: 325px;
+    height: 300px;
     text-align: justify;
-    background-color: white;
+    background-color: transparent;
     border-radius: 10px;
     transition: 0.5s;
     left: calc(50% - 320px);
@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid #666;
+    border: 3px solid #fff;
 }
 
 .item:hover {
@@ -53,28 +53,52 @@
 }
 
 .picDisplay {
-    border: 1px solid #666;
+    border-radius: 10px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 50%;
     height: 100%;
 }
 
 .descDisplay {
-    border: 1px solid #666;
+    border: 1px solid #fff;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 50%;
     text-align: justify;
     padding: 20px;
     height: 73.5%;
+    color: #fff;
+    height: 77.9%;
   }
 
-@media (max-width: 400px){
+.bodyDisplay {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    height: 180px;
+}
+
+.techGrid {
+    display: 'grid';
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    gap: '10px';
+    height: 100%;
+}
+
+@media (max-width: 450px){
     .item {
-        left: calc(50% - 50px);
-        width: 500px;
+        left: calc(50% - 118px);
+        width: 270px;
+    }
+
+    .descDisplay {
+        font-size: 8.6px;
+    }
+
+    .bodyDisplay {
+        grid-template-columns: 35% 65%;
     }
 }
+

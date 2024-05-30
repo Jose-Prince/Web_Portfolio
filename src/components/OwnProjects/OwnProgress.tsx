@@ -3,7 +3,7 @@ import calc from '../../../public/clac.png';
 import blog from '../../../public/blog.png';
 import sonic from '../../../public/sonic.png';
 import { Imagen } from "../About/Imagen";
-import { useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 export const OwnProjects: React.FC = () => {
   const [state, setState] = useState({
@@ -47,6 +47,21 @@ export const OwnProjects: React.FC = () => {
       },
     ]
   });
+  
+  const [screenWidth, setScreenWidth] = useState<number>(0);
+
+  useLayoutEffect(() => {
+    const updateSize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    updateSize(); // Set the initial size
+    window.addEventListener('resize', updateSize);
+
+    console.log(window.innerWidth);
+    
+  }, []);
+
 
   const getStyles = (index: number) => {
     const stt = Math.abs(index - state.active);
@@ -91,43 +106,87 @@ export const OwnProjects: React.FC = () => {
     }
   };
 
-  return (
-    <>
-      <div className={styles.slider}>
-        <button id={styles.prev} onClick={handlePrev}>{'<'}</button>
-        {state.items.map((item, index: number) => {
-          const style = getStyles(index);
-          return (
-            <a
-              key={item.id}
-              className={styles.item}
-              style={style}
-              href={item.page}
-              onClick={(event) => handleClick(item.page, item.repo, event)}
-              target="_blank"  // Open the project page in a new tab
-            >
-              <h2 style={{ cursor: 'pointer' }}>
-                {item.title}
-              </h2>
-              <div style={{ display: 'flex', height: '50%', width: '100%' }}>
+  if ( screenWidth > 500){
+    return (
+      <>
+        <div className={styles.slider}>
+          <button id={styles.prev} onClick={handlePrev}>{'<'}</button>
+          {state.items.map((item, index: number) => {
+            const style = getStyles(index);
+            return (
+              <a
+                key={item.id}
+                className={styles.item}
+                style={style}
+                href={item.page}
+                onClick={(event) => handleClick(item.page, item.repo, event)}
+                target="_blank"  // Open the project page in a new tab
+              >
+                <h2 style={{ cursor: 'pointer', margin: '5px' }}>
+                  {item.title}
+                </h2>
+                <div className={styles.bodyDisplay}>
+                  <div className={styles.picDisplay}>
+                    <img src={item.picture.src} alt='Imagen' style={{ width: '100%', height: '100%' }} />
+                  </div>
+                  <div className={styles.descDisplay}>
+                    {item.content}
+                  </div>
+                </div>
+                <h4 style={{ margin: '0', width: '100%', paddingLeft: '20px', paddingTop: '10px' }}>Technologies:</h4>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  {item.technologies.map((tech: string) => (
+                    <Imagen key={tech} src={tech} type={false} ancho="3vw" variant={'contact'} />
+                  ))}
+                </div>
+              </a>
+            );
+          })}
+          <button id={styles.next} onClick={handleNext}>{'>'}</button>
+        </div>
+      </>
+    )
+  } else {
+    return (
+      <>
+        <div className={styles.slider}>
+          <button id={styles.prev} onClick={handlePrev}>{'<'}</button>
+          {state.items.map((item, index: number) => {
+            const style = getStyles(index);
+            return (
+              <a
+                key={item.id}
+                className={styles.item}
+                style={style}
+                href={item.page}
+                onClick={(event) => handleClick(item.page, item.repo, event)}
+                target="_blank"  // Open the project page in a new tab
+              >
+                <h2 style={{ cursor: 'pointer', margin: '5px', color: 'white' }}>
+                  {item.title}
+                </h2>
+                <div className={styles.bodyDisplay}>
+                  <div style={{display: 'flex', flexDirection: 'column', border: '1px solid white'}}>
+                    <h4 style={{ margin: '0', width: '100%', fontSize: '12px', color: 'white' }}>Technologies:</h4>
+                    <div className={styles.techGrid}>
+                    {item.technologies.map((tech: string) => (
+                      <Imagen key={tech} src={tech} type={false} ancho="3vw" variant={'contact'} />
+                    ))}
+                  </div>
+                  </div>
+                  <div className={styles.descDisplay}>
+                    {item.content}
+                  </div>
+                </div>
                 <div className={styles.picDisplay}>
-                  <img src={item.picture.src} alt='Imagen' style={{ width: '100%', height: '100%' }} />
-                </div>
-                <div className={styles.descDisplay}>
-                  {item.content}
-                </div>
-              </div>
-              <h4 style={{ margin: '0', width: '100%', paddingLeft: '20px', paddingTop: '10px' }}>Technologies:</h4>
-              <div style={{ display: 'flex', gap: '10px' }}>
-                {item.technologies.map((tech: string) => (
-                  <Imagen key={tech} src={tech} type={false} ancho="3vw" variant={'contact'} />
-                ))}
-              </div>
-            </a>
-          );
-        })}
-        <button id={styles.next} onClick={handleNext}>{'>'}</button>
-      </div>
-    </>
-  )
+                    <img src={item.picture.src} alt='Imagen' style={{ width: '100%', height: '100%', borderRadius: '0 0 10px 10px' }} />
+                  </div>
+              </a>
+            );
+          })}
+          <button id={styles.next} onClick={handleNext}>{'>'}</button>
+        </div>
+      </>
+    )
+  }
 }

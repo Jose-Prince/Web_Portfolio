@@ -5,9 +5,9 @@
     align-items: center;
     width: 100%;
     overflow-y: auto;
-}
-
-.circle {
+  }
+  
+  .circle {
     width: 20vw;
     height: 20vw;
     max-width: 400px;
@@ -17,41 +17,76 @@
     display: flex;
     justify-content: center;
     background: linear-gradient(to bottom right, #091833, #133e7e);
-}
-
-@media (max-width: 1000px) {
+  }
+  
+  @media (max-width: 1000px) {
     .circle {
-        width: 180px;
-        height: 180px;
+      width: 180px;
+      height: 180px;
     }
-
+  
     .imgPosition {
-        width: 500px;
-        height: 500px;
+      width: 500px;
+      height: 500px;
     }
-}
-
-.imgPosition {
+  }
+  
+  .imgPosition {
     border-radius: 50%;
     max-width: 400px;
     min-width: 180px;
     min-height: 180px;
     height: auto; /* Ajuste automático de la altura para mantener la proporción */
-}
-
-.imgProfile {
+  }
+  
+  .imgProfile {
     border-radius: 50%;
     min-width: 20px;
     min-height: 20px;
-}
-
-.description {
+  }
+  
+  .description {
     width: 80%;
     text-align: justify;
-}
-
-.horizontalDisplay {
+  }
+  
+  .horizontalDisplay {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
+  
+  .contactsDis {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .myName {
+    font-size: 2vw;
+  }
+  
+  @media (max-width: 450px) {
+    .contactsDis {
+      flex-direction: column;
+    }
+    
+    .contactImage {
+      width: 7vw !important;
+      height: 7vw !important;
+    }
+    
+    .referenceImage {
+      width: 20vw !important;
+      height: 20vw !important;
+    }
+
+    .myName {
+      font-size: 16px;
+    }
+
+    .description {
+      font-size: 12.8px;
+    }
+  }
+  

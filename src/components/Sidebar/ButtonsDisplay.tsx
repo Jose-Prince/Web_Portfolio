@@ -1,15 +1,13 @@
-import { component$, useSignal, useTask$ } from "@builder.io/qwik";
 import styles from './Sidebar.module.css'
-import { NavigationButton } from "./NavigationButton";
-import { useLocation } from "@builder.io/qwik-city";
+import NavigationButton from "./NavigationButton";
 
-export const ButtonsDisplay = component$(()=>{
+export const ButtonsDisplay:React.FC = ()=>{
 
     return (
-        <div class={styles.sidebar}>
-            <NavigationButton label={'About me'}/>
-            <NavigationButton label="My projects"/>
+        <div className={styles.sidebar}>
+            <NavigationButton label='About Me'/>
+            <NavigationButton label="My Projects"/>
             <NavigationButton label="Technologies"/>
         </div>
     )
-})
+}

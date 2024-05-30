@@ -1,17 +1,17 @@
-import { component$ } from "@builder.io/qwik";
+import React from 'react';
 import { Imagen } from "./Imagen";
-import styles from './About.module.css'
+import styles from '../About/About.module.css';
 
 interface ItemsProps {
-    ref: string
-    info: string
+  src: string;
+  info: string;
 }
 
-export const Contact = component$<ItemsProps>((props)=>{
-    return (
-        <div class={styles.horizontalDisplay}>
-            <Imagen ref={props.ref} ancho="3" type={false}/>
-            <p style={{marginLeft: '10px'}}>{props.info}</p>
-        </div>      
-    )
-})
+export const Contact: React.FC<ItemsProps> = (props) => {
+  return (
+    <div className={styles.horizontalDisplay}>
+      <Imagen src={props.src} ancho="2vw" type={false} variant="contact" />
+      <p style={{ marginLeft: '10px' }}>{props.info}</p>
+    </div>
+  );
+};

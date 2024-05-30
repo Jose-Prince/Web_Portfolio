@@ -1,36 +1,40 @@
-import { component$, useSignal, useTask$ } from "@builder.io/qwik";
-import styles from './Sidebar.module.css';
-import { useLocation, useNavigate } from "@builder.io/qwik-city";
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import styles from '../Sidebar/Sidebar.module.css'
 
 interface ItemsProps {
-    label: string;
+  label: string;
 }
 
-export const NavigationButton = component$<ItemsProps>((props) => {
-    const navigate = useNavigate();
-    const location = useLocation();
-    const state = useSignal(false);
+const NavigationButton: React.FC<ItemsProps> = ({ label }) => {
+  const router = useRouter();
+  const [isActive, setIsActive] = useState(false);
 
-    useTask$(({ track }) => {
-        track(() => location.url.pathname)
-        const encodedLocation = location.url.pathname
-        const decodedLocation = decodeURIComponent(encodedLocation).replace(/\/$/, '').replace('/', '')      
-        
-        if (decodedLocation === props.label) {
-            state.value = true;
-        } else {
-            state.value = false;
-        }
-    });
+  useEffect(() => {
+    const encodedLocation = router.pathname;
+    const decodedLocation = decodeURIComponent(encodedLocation).replace(/\/$/, '').replace('/', '');
 
-    return (
-        <button
-            class={state.value ? styles.navButtonA : styles.navButton}
-            onClick$={() => navigate('/' + props.label)}
-        >
-            <p class={styles.textRot}>
-                {props.label.toUpperCase()}
-            </p>
-        </button>
-    );
-});
+    if (decodedLocation === label.replace(' ','')) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
+  }, [router.pathname, label]);
+
+  const handleClick = () => {
+    router.push('/' + label.replace(' ',''));
+  };
+
+  return (
+    <button
+      className={isActive ? styles.navButtonA : styles.navButton}
+      onClick={handleClick}
+    >
+      <p className={styles.textRot}>
+        {label.toUpperCase()}
+      </p>
+    </button>
+  );
+};
+
+export default NavigationButton;

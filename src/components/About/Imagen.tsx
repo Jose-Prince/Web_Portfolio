@@ -1,26 +1,20 @@
-import { component$ } from "@builder.io/qwik";
-import styles from './About.module.css';
+import React from 'react';
+import styles from '../About/About.module.css';
 
 interface ItemsProps {
-    ref: string;
-    ancho: string;
-    type: boolean;
+  src: string;
+  ancho: string;
+  type: boolean;
+  variant: 'contact' | 'reference'; // Nueva prop para diferenciar variantes
 }
 
-export const Imagen = component$<ItemsProps>(({ ref, ancho, type }) => {
-    const aspectRatio = 1; // Por ejemplo, 1 para una imagen cuadrada. Ajusta según la proporción real de tu imagen.
-
-    // Convertir ancho a número y calcular la altura
-    const widthNum = parseFloat(ancho);
-    const heightNum = widthNum / aspectRatio;
-
-    return (
-        <img
-            src={ref}
-            class={type ? styles.imgPosition : styles.imgProfile}
-            style={{ width: `${widthNum}vw`, height: `${heightNum}vw` }}
-            width={widthNum}
-            height={heightNum}
-        />
-    );
-});
+export const Imagen: React.FC<ItemsProps> = ({ src, ancho, type, variant }) => {
+  return (
+    <img
+      src={src}
+      className={`${type ? styles.imgPosition : styles.imgProfile} ${variant === 'contact' ? styles.contactImage : styles.referenceImage}`}
+      style={{ width: ancho }}
+      alt=""
+    />
+  );
+};

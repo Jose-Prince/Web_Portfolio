@@ -1,21 +1,22 @@
-import { component$, useVisibleTask$ } from "@builder.io/qwik"
-import { useNavigate } from "@builder.io/qwik-city"
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 interface ItemProps {
-    route: string
+  route: string;
 }
 
-export const Redirect = component$<ItemProps>((props) => {
-    const navigate = useNavigate()
+const Redirect: React.FC<ItemProps> = ({ route }) => {
+  const router = useRouter();
 
-    if (props.route === '') {
-        useVisibleTask$(()=>{
-            navigate('/About me')
-        })
+  useEffect(() => {
+    if (route === '') {
+      router.push('/AboutMe');
+    } else {
+      router.push('/' + route);
     }
+  }, [route, router]);
 
-    useVisibleTask$(()=> {
-        navigate('/'+props.route)
-    })
-    return null
-})
+  return null;
+};
+
+export default Redirect;

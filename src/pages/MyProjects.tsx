@@ -11,7 +11,7 @@ export default function About() {
           <ButtonsDisplay/>
           <div className={styles.projectDisplay}>
         <div className={styles.indicator}>
-          <h1 style={{margin:'0', opacity: 'none'}}>Completed projects::</h1>
+          <h1 style={{margin:'0', opacity: 'none'}}>Completed projects:</h1>
         </div>
         <OwnProjects />
         <div className={styles.indicator}>

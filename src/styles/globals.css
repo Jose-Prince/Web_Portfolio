@@ -39,6 +39,16 @@ h1 {
   padding: 15px;
   margin-top: 0px;
   font-size: 2vw;
+  color: #711c91;
+    text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #ea00d9,
+        0 0 82px #ea00d9,
+        0 0 92px #ea00d9,
+        0 0 102px #ea00d9,
+        0 0 151px #ea00d9;
 }
 
 a {

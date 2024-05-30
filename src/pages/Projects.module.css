@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    animation: transitionE 2s ease 0s 1 normal forwards;
 }
 
 .slider {
@@ -102,3 +103,15 @@
     }
 }
 
+@keyframes transitionE {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

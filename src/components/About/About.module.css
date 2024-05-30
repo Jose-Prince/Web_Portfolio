@@ -5,6 +5,7 @@
     align-items: center;
     width: 100%;
     overflow-y: auto;
+    animation: transitionE 2s ease 0s 1 normal forwards;
   }
   
   .circle {
@@ -87,6 +88,18 @@
 
     .description {
       font-size: 12.8px;
+    }
+  }
+  
+  @keyframes transitionE {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   

@@ -1,1 +1,7 @@
-{"/_app":"pages/_app.js","/_document":"pages/_document.js","/AboutMe":"pages/AboutMe.html","/MyProjects":"pages/MyProjects.html","/Technologies":"pages/Technologies.html","/":"pages/index.html","/_error":"pages/_error.js","/404":"pages/404.html"}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/AboutMe": "pages/AboutMe.js",
+  "/MyProjects": "pages/MyProjects.js"
+}

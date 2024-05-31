@@ -19,7 +19,7 @@ export const OwnProjects: React.FC = () => {
           'https://vitejs.dev/logo-with-shadow.png',
           'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg'
         ],
-        page: 'http://172.233.155.162:8090/Home',
+        page: 'http://172.233.174.82:8110/Home',
         repo: 'https://github.com/Jose-Prince/Blog_movies.git'
       },
       { id: 2, 
@@ -30,7 +30,7 @@ export const OwnProjects: React.FC = () => {
           'https://cdn-icons-png.flaticon.com/256/174/174854.png',
           'https://img-resize-cdn.joshmartin.ch/768x0%2Cc3537b9f46b5f6055fbc8b4cd03b6b2cc63fc2eefd3d8cd9f0c9f99a5933e496/https://joshmartin.ch/app/uploads/2017/10/css3.svg'
         ],
-        page: 'http://172.235.51.73:8090/',
+        page: 'http://172.233.174.82:8100/',
         repo: 'https://github.com/Jose-Prince/Lab_CSS.git'
       },
       { id: 3, 
@@ -42,7 +42,7 @@ export const OwnProjects: React.FC = () => {
           'https://vitejs.dev/logo-with-shadow.png',
           'https://vitest.dev/logo-shadow.svg'
         ],
-        page: 'http://172.235.51.73:8100/',
+        page: 'http://172.233.174.82:8130/',
         repo: 'https://github.com/Jose-Prince/Lab_test.git'
       },
     ]
@@ -97,15 +97,18 @@ export const OwnProjects: React.FC = () => {
   };
 
   const handleClick = (link1: string, link2: string, event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    event.preventDefault();
-    if (link2) {
-      window.open(link2, '_blank');
-    }
     if (link1) {
-      window.open(link1, '_blank');
+      const firstWindow = window.open(link2, '_blank');
+      if (firstWindow) {
+        firstWindow.addEventListener('load', () => {
+          if (link2) {
+            window.open(link2, '_blank');
+          }
+        });
+      }
     }
   };
-
+  
   if ( screenWidth > 500){
     return (
       <>

@@ -11,7 +11,7 @@ export const OwnProjects: React.FC = () => {
     items: [
       { id: 1, 
         title: "Movies' Blog", 
-        content: 'Web blog that shows the best movies in my opinion. It has two screens: Home and Admin. In the Home screen you can visualize the content of each movie; Admin tiene las mismas funciones de Home pero añade la posibilidad de crear, modificar y eliminar películas.',
+        content: 'Web blog that shows the best movies in my opinion. It has two screens: Home and Admin. In the Home screen you can visualize the content of each movie; Admin has the same functions as Home but adds the ability to create, modify and delete movies.',
         picture: blog,
         technologies: [
           'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png',

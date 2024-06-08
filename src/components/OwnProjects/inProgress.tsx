@@ -31,6 +31,19 @@ export const InProgress: React.FC = () => {
         ],
         repo: 'https://github.com/cmd-AJ/Ing-Software.git' 
       },
+      {
+	id: 2,
+	title: 'Amazon ELM',
+	description: 'Amazon re-design using the ELM language',
+	objectives: [
+		'Learn the ELM language',
+		'Introduce myself into functional programming'
+	],
+	technologies: [
+		'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Elm_logo.svg/1200px-Elm_logo.svg.png'
+	],
+	repo: 'https://github.com/Jose-Prince/Elm-Amazon.git'
+      }
     ]
   });
 
